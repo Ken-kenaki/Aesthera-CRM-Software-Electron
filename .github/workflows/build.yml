@@ -9,6 +9,10 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
 
+    # Grants permission to create releases and upload assets
+    permissions:
+      contents: write
+
     strategy:
       fail-fast: false # Prevents one OS failure from canceling the others
       matrix:
