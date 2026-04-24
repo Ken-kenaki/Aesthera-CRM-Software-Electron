@@ -20,6 +20,14 @@
     "directories": {
       "output": "dist"
     },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "category": "Utility",
+      "icon": "build/icons"
+    },
     "win": {
       "target": [
         "nsis"
