@@ -15,6 +15,9 @@ jobs:
         # We build on all three major OS environments
         os: [macos-latest, ubuntu-latest, windows-latest]
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Clears deprecation warnings
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -28,7 +31,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22 # Updated to latest LTS
           cache: "npm"
           cache-dependency-path: package-lock.json
 
